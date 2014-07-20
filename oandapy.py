@@ -274,7 +274,7 @@ class Streamer():
 
                 if line:
                     data = json.loads(line.decode())
-                    if not (ignore_heartbeat and data.has_key("heartbeat")):
+                    if not (ignore_heartbeat and 'heartbeat' in data):
                         self.on_success(data)
 
 
