@@ -273,7 +273,7 @@ class Streamer():
                     break
 
                 if line:
-                    data = json.loads(line)
+                    data = json.loads(line.decode())
                     if not (ignore_heartbeat and data.has_key("heartbeat")):
                         self.on_success(data)
 
